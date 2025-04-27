@@ -1,0 +1,578 @@
+{% extends "onematrix/mobile-base.html" %}
+{% block content %}
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Main Content -->
+        <main class="mx-4 md:mx-14 rounded-[40px] flex-grow bg-[#e7e7e7]">
+            <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+                <!-- New Tag -->
+                <div class="flex justify-center mb-12">
+                    <span class="bg-white px-5 py-2 rounded-full">
+                        <span class="font-[800] mr-1 neon-green-badge">New</span> September updates is here
+                    </span>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+                        Transform Your<br>Workflow With 1Matrix
+                    </h1>
+                    <p class="text-gray-600 max-w-xl mx-auto">
+                        Streamline Your Processes And Enhance Productivity With Our Cutting-Edge Solution.
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <div class="mt-10 mb-20">
+                        <a href="#" class="try-free-btn">
+                            Try Free
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="flex justify-center mb-5">
+                    <img src="/media/masteradmin_web/bg-home.png" width="350" height="350" alt="Features showing Efficiency, Collaboration and Scalability" class="rounded-lg shadow-sm max-w-full sm:max-w-[60%] h-auto">
+                </div>
+
+                <!-- API Integration Section -->
+                <div class="py-12 md:py-20 rounded-3xl px-4 md:px-8 max-w-full mx-1">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-[700] mb-4">
+                            The Essential Api That Help<br class="hidden sm:block">Connecting Team
+                        </h2>
+                        
+                        <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-light">
+                            A platform delivering ultra-fast, dynamic & personalised project experiences.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature Box - UPDATED to match the first image -->
+                    <div class="mb-10">
+                        <!-- Feature cards in a row -->
+                        <div class="flex justify-center items-center flex-wrap gap-y-8 feature-box-container">
+                            <!-- Group Chat -->
+                            <div class="feature-box mx-2">
+                                <div class="feature-icon bg-blue-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B89F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                    </svg>
+                                </div>
+                                <span>Group Chat</span>
+                            </div>
+                            
+                            <!-- Instant Mail -->
+                            <div class="feature-box mx-2">
+                                <div class="feature-icon bg-green-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4CD97B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Instant Mail</span>
+                            </div>
+                            
+                            <!-- File Boat -->
+                            <div class="feature-box mx-2">
+                                <div class="feature-icon bg-purple-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9A5CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                    <div class="icon-badge">+</div>
+                                </div>
+                                <span>File Boat</span>
+                            </div>
+                            
+                            <!-- Call Manage -->
+                            <div class="feature-box mx-2">
+                                <div class="feature-icon bg-orange-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F9A65C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <span>Call Manage</span>
+                            </div>
+                            
+                            <!-- Teamwork -->
+                            <div class="feature-box mx-2">
+                                <div class="feature-icon bg-pink-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F95CA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <span>Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="text-center mb-8">
+                        <a href="#" class="get-started-btn inline-flex items-center">
+                            Get Started
+                        </a>
+                    </div>
+                    
+                    <!-- Benefits -->
+                    <div class="flex justify-center flex-wrap">
+                        <div class="benefit-item mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Free Signup</span>
+                        </div>
+                        
+                        <div class="benefit-item mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>No Credit Card Required</span>
+                        </div>
+                        
+                        <div class="benefit-item mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Cancel Anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="px-8">
+                    <!-- Pricing Toggle -->
+                    <div class="flex justify-center mb-12">
+                        <div class="border border-black rounded-full inline-flex p-2">
+                            <button onclick="togglePricing('monthly')" id="monthlyBtn" class="px-4 py-1 text-sm font-medium rounded-full bg-black text-white transition-colors duration-200">Monthly</button>
+                            <button onclick="togglePricing('yearly')" id="yearlyBtn" class="px-4 py-1 text-sm font-medium rounded-full transition-colors duration-200">Yearly</button>
+                        </div>
+                    </div>
+                    <script>
+                        function togglePricing(plan) {
+                            const monthlyBtn = document.getElementById('monthlyBtn');
+                            const yearlyBtn = document.getElementById('yearlyBtn');
+                            
+                            if (plan === 'monthly') {
+                                monthlyBtn.classList.add('bg-black', 'text-white');
+                                yearlyBtn.classList.remove('bg-black', 'text-white');
+                            } else {
+                                yearlyBtn.classList.add('bg-black', 'text-white');
+                                monthlyBtn.classList.remove('bg-black', 'text-white');
+                            }
+                            // Show/hide pricing elements based on selected plan
+                            const monthlyPrices = document.querySelectorAll('.monthly-price');
+                            const yearlyPrices = document.querySelectorAll('.yearly-price');
+                            
+                            if (plan === 'monthly') {
+                                monthlyPrices.forEach(el => el.classList.remove('hidden'));
+                                yearlyPrices.forEach(el => el.classList.add('hidden'));
+                            } else {
+                                monthlyPrices.forEach(el => el.classList.add('hidden'));
+                                yearlyPrices.forEach(el => el.classList.remove('hidden'));
+                            }
+                        }
+                    </script>
+
+                    <!-- Pricing Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                        <!-- Basic Plan - Plan Details Card -->
+                        <div>
+                            <div class="border-[1px] border-black rounded-3xl p-7 mb-4 flex items-center gap-4">
+                                <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center shadow-lg transform hover:translate-y-[-2px] transition-transform duration-200" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold">Basic</h3>
+                                    <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-6 shadow-[0_3px_5px_rgba(0,0,0,0.1)]">
+                                <span class="mb-4 bg-[#EAECE9] rounded-full px-2 py-1 text-sm">Save up to 30%</span>
+                                <div class="flex items-baseline mb-6">
+                                    <span class="monthly-price text-4xl font-bold">$16.00</span>
+                                    <span class="yearly-price text-4xl font-bold hidden">$160.00</span>
+                                    <span class="monthly-price text-gray-500 ml-2">/ Month</span>
+                                    <span class="yearly-price text-gray-500 ml-2 hidden">/ Year</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-8">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam venenatis orci.
+                                </p>
+
+                                <button class="w-full py-3 mb-6 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    Get Started
+                                </button>
+
+                                <div class="space-y-6 mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-sm">10GB Bandwidth</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-sm">56 Limit Support</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-medium mb-3">Free Elements:</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="text-sm text-gray-600">Increased Efficiency</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="text-sm text-gray-600">Great Communication</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Standard Plan - Plan Details Card -->
+                        <div>
+                            <div class="border-[1px] border-black rounded-3xl p-7 mb-4 flex items-center gap-4">
+                                <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center shadow-lg transform hover:translate-y-[-2px] transition-transform duration-200" style="box-shadow: 0 8px 16px rgba(0,0,0,0.2), inset 0 -2px 4px rgba(255,255,255,0.1)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold">Standard</h3>
+                                    <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-6 shadow-[0_3px_5px_rgba(0,0,0,0.1)]">
+                                <span class="mb-4 bg-[#EAECE9] rounded-full px-2 py-1 text-sm">Save up to 50%</span>
+                                <div class="flex items-baseline mb-6">
+                                    <span class="monthly-price text-4xl font-bold">$24.00</span>
+                                    <span class="yearly-price text-4xl font-bold hidden">$240.00</span>
+                                    <span class="monthly-price text-gray-500 ml-2">/ Month</span>
+                                    <span class="yearly-price text-gray-500 ml-2 hidden">/ Year</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-6">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam venenatis orci.
+                                </p>
+
+                                <button class="w-full py-3 mb-6 bg-[#c7fb55] rounded-full text-sm font-medium flex items-center justify-center gap-2 hover:brightness-95 transition-all">
+                                    Get Started
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+
+                                <div class="space-y-6 mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-sm">10GB Bandwidth</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-sm">56 Limit Support</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-sm">124 Dropper use</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-medium mb-3">Free Elements:</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="text-sm text-gray-600">Increased Efficiency</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="text-sm text-gray-600">Great Communication</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="text-sm text-gray-600">Worry-free speed robustness</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plus Plan - Plan Details Card -->
+                    </div>
+                </div>
+            </div>
+            <!-- Virtual Medical Care Section -->
+            <div class="py-8 md:py-12 px-4 md:px-8 bg-[#E7E7E7]">
+                <div class="max-w-6xl mx-3">
+                    <!-- Header -->
+                    <div class="text-center mb-8 md:mb-10">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Virtual Medical Care</h2>
+                        <p class="text-gray-600 text-sm md:text-base">Full range of solutions to effectively enhance your virtual care.</p>
+                    </div>
+
+                    <!-- Main Layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
+                        <!-- Left Column -->
+                        <div class="md:col-span-3 space-y-4">
+                            <!-- Integrations Card -->
+                            <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6">
+                                <div class="flex space-x-2 mb-4">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <svg viewBox="0 0 24 24" class="h-4 w-4 text-blue-600" fill="currentColor">
+                                            <rect width="10" height="10" x="2" y="2" rx="1.5"/>
+                                            <rect width="10" height="10" x="2" y="12" rx="1.5"/>
+                                            <rect width="10" height="10" x="12" y="2" rx="1.5"/>
+                                            <rect width="10" height="10" x="12" y="12" rx="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                                        <svg viewBox="0 0 24 24" class="h-4 w-4 text-orange-500" fill="currentColor">
+                                            <circle cx="12" cy="12" r="9"/>
+                                            <path d="M12 7v10M7 12h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                        <svg viewBox="0 0 24 24" class="h-4 w-4 text-green-500" fill="currentColor">
+                                            <path d="M22 2L11 13l-4-4-6 6 4 4 6-6 11-11z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-2">Integrations</h3>
+                                <p class="text-sm text-gray-700">Easily integrations of third party apps. All in one platform.</p>
+                            </div>
+
+                            <!-- Innovation Tags -->
+                            <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6">
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-xs font-medium">
+                                        Innovative
+                                        <span class="ml-1 w-4 h-4 bg-white rounded-full flex items-center justify-center">+</span>
+                                    </div>
+                                    
+                                    <div class="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center text-xs">+</div>
+                                    
+                                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-medium">
+                                        Revolutionary
+                                    </div>
+                                    
+                                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-xs font-medium mt-2">
+                                        Empowering
+                                        <span class="ml-1 w-4 h-4 bg-white rounded-full flex items-center justify-center">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Middle Column -->
+                        <div class="md:col-span-4">
+                            <!-- DocHands Card -->
+                            <div class="bg-blue-100 rounded-2xl md:rounded-3xl h-[300px] md:h-full overflow-hidden relative">
+                                <div class="p-4 md:p-6">
+                                    <h3 class="text-2xl md:text-3xl font-bold text-blue-800">DocHands.</h3>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=668&q=80" 
+                                     alt="Woman smiling" class="absolute bottom-0 w-full" style="height: calc(100% - 85px); object-fit: cover; object-position: center top;">
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="md:col-span-5">
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-5">
+                                <!-- 95% Card -->
+                                <div class="col-span-2 md:col-span-3 bg-green-50 rounded-2xl md:rounded-3xl p-4 md:p-6">
+                                    <div class="flex flex-col items-center">
+                                        <div class="bg-pink-200 rounded-full w-10 h-10 flex items-center justify-center mb-3">
+                                            <svg class="h-6 w-6 text-pink-600" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <h2 class="text-5xl md:text-7xl font-bold mb-1">95%</h2>
+                                        <p class="text-xs text-center text-gray-700">Clinical and Medical care satisfaction with DocHands Platform.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Dental Card -->
+                                <div class="col-span-2 bg-white rounded-2xl md:rounded-3xl overflow-hidden relative h-[200px] md:h-full">
+                                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1350&q=80" 
+                                         alt="Dental smile" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+                                        <h3 class="text-white text-sm font-medium">Small changes and<br>big impact on the way!</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Weekly Journey -->
+                                <div class="col-span-2 md:col-span-5 bg-blue-50 rounded-2xl md:rounded-3xl p-4 md:p-6">
+                                    <h3 class="text-lg md:text-xl font-semibold mb-1">Weekly Journey</h3>
+                                    <p class="text-sm text-gray-700 mb-4">Workflow and Patient journey mapping within 02-03 Weeks.</p>
+                                    <div class="relative h-20">
+                                        <!-- Avatar circles -->
+                                        <div class="absolute w-8 md:w-10 h-8 md:h-10 rounded-full bg-cover bg-center border-2 border-white" 
+                                             style="background-image: url('https://randomuser.me/api/portraits/women/65.jpg'); top: 0; left: 10%"></div>
+                                        <div class="absolute w-8 md:w-10 h-8 md:h-10 rounded-full bg-cover bg-center border-2 border-white" 
+                                             style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); top: 40%; left: 30%"></div>
+                                        <div class="absolute w-8 md:w-10 h-8 md:h-10 rounded-full bg-cover bg-center border-2 border-white" 
+                                             style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg'); bottom: 0; left: 50%"></div>
+                                        <div class="absolute w-8 md:w-10 h-8 md:h-10 rounded-full bg-cover bg-center border-2 border-white" 
+                                             style="background-image: url('https://randomuser.me/api/portraits/women/47.jpg'); top: 10%; right: 25%"></div>
+                                        <div class="absolute w-8 md:w-10 h-8 md:h-10 rounded-full bg-cover bg-center border-2 border-white" 
+                                             style="background-image: url('https://randomuser.me/api/portraits/men/45.jpg'); top: 40%; right: 10%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Integrations Section -->
+            <div class="rounded-b-[40px] py-16 px-8 bg-[#E7E7E7]">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Badge -->
+                    <div class="flex mb-12">
+                        <span class="bg-white px-5 py-2 rounded-full text-sm">
+                            Radar, Integrations
+                        </span>
+                    </div>
+                    
+                    <!-- Two column layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Left column - Heading -->
+                        <div>
+                            <h2 class="text-5xl font-[500] leading-tight mb-0">
+                                Integrated with all the tools you already love!
+                            </h2>
+                        </div>
+                        
+                        <!-- Right column - Description -->
+                        <div>
+                            <p class="text-gray-600">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis orci sit amet lobortis tristique. Aliquam euismod lacinia tortor.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Integration logos with descriptions -->
+                    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16 mt-20">
+                        <!-- PayPal -->
+                        <div class="flex flex-col items-start">
+                            <div class="bg-black w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-7 h-7 text-white fill-current">
+                                    <path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">PayPal</h3>
+                            <p class="text-gray-600 mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </p>
+                            <a href="#" class="flex items-center text-gray-700 font-medium hover:underline">
+                                View Integration
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Stripe -->
+                        <div class="flex flex-col items-start">
+                            <div class="bg-black w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-7 h-7 text-white fill-current">
+                                    <path d="M155.3 154.6c0-22.3 18.6-30.9 48.4-30.9 43.4 0 98.5 13.3 141.9 36.7V26.1C298.3 7.2 251.1 0 203.8 0 88.1 0 11 60.4 11 161.4c0 157.9 216.8 132.3 216.8 200.4 0 26.4-22.9 34.9-54.7 34.9-47.2 0-108.2-19.5-156.1-45.5v128.5a396.09 396.09 0 0 0 156 32.4c118.6 0 200.3-51 200.3-153.6 0-170.2-218-139.7-218-203.9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Stripe</h3>
+                            <p class="text-gray-600 mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </p>
+                            <a href="#" class="flex items-center text-gray-700 font-medium hover:underline">
+                                View Integration
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <!-- QuickBooks -->
+                        <div class="flex flex-col items-start">
+                            <div class="bg-black w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 text-white fill-current">
+                                    <path d="M11.957.042a12 12 0 0 0-8.532 20.412 12 12 0 0 0 20.37-8.534A12 12 0 0 0 11.957.042zm5.4 14.142c-.465 3.137-2.829 4.752-5.9 4.762-2.336 0-4.535-1.463-5.29-3.561a5.203 5.203 0 0 1-.283-2.339c.465-3.137 2.829-4.752 5.9-4.762 2.336 0 4.535 1.463 5.29 3.561.431.878.53 1.75.283 2.339z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">QuickBooks</h3>
+                            <p class="text-gray-600 mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </p>
+                            <a href="#" class="flex items-center text-gray-700 font-medium hover:underline">
+                                View Integration
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Wise -->
+                        <div class="flex flex-col items-start">
+                            <div class="bg-black w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 text-white fill-current">
+                                    <path d="M12.5 1.6C18.1 1.6 22.4 6.3 22.4 11.4C22.4 16.5 18.1 21.2 12.5 21.2C6.9 21.2 2.6 16.5 2.6 11.4C2.6 6.3 6.9 1.6 12.5 1.6Z" fill="currentColor"/>
+                                    <path d="M9.7 11L9.4 10.5L9.2 10.5C6.5 10.5 4.4 11.8 4.4 13.3C4.4 14.9 6.5 16.1 9.2 16.1L9.4 16.1L9.7 15.6C10.9 14 11.6 12.5 11.6 11C11.6 9.5 10.9 8 9.7 6.4L9.4 5.9L9.2 5.9C6.5 5.9 4.4 7.1 4.4 8.7C4.4 10.2 6.5 11.5 9.2 11.5L9.4 11.5L9.7 11Z" fill="white"/>
+                                    <path d="M15.3 11L15.6 10.5L15.8 10.5C18.5 10.5 20.6 11.8 20.6 13.3C20.6 14.9 18.5 16.1 15.8 16.1L15.6 16.1L15.3 15.6C14.1 14 13.4 12.5 13.4 11C13.4 9.5 14.1 8 15.3 6.4L15.6 5.9L15.8 5.9C18.5 5.9 20.6 7.1 20.6 8.7C20.6 10.2 18.5 11.5 15.8 11.5L15.6 11.5L15.3 11Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Wise</h3>
+                            <p class="text-gray-600 mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </p>
+                            <a href="#" class="flex items-center text-gray-700 font-medium hover:underline">
+                                View Integration
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
