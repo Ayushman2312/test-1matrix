@@ -44,6 +44,7 @@ class UserAuthMiddleware:
         # Check if the path is public, static/media, admin, or other exempt paths
         is_public_path = (
             current_path in public_paths or 
+            current_path.rstrip('/') in [p.rstrip('/') for p in public_paths] or  # Compare paths without trailing slashes
             is_static_or_media or 
             'contact-us' in current_path or
             'about-us' in current_path or
@@ -52,6 +53,7 @@ class UserAuthMiddleware:
             'cancellation' in current_path or
             'customersupport' in current_path or
             'upi-payment' in current_path or
+            'masteradmin' in current_path or
             # Include website public paths
             current_path.startswith('/website/public/')
         )

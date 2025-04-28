@@ -255,7 +255,8 @@ class CustomDomainMiddleware:
             '.test',
             '.local',
             '1matrix.io',
-            '.devtunnels.ms'  # Match any devtunnels.ms subdomain
+            '.devtunnels.ms',
+            '1matrix.in'  # Match any devtunnels.ms subdomain
         ]
         
         for domain in local_domains:

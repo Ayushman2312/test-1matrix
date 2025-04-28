@@ -119,3 +119,26 @@
 2025-04-11 18:19:54,978 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
 2025-04-11 18:20:20,151 [INFO] Getting context data for UsersView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:769
 2025-04-12 18:32:06,214 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 14:37:24,763 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 14:37:34,488 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 14:42:14,611 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 14:46:58,182 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 15:19:08,930 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 15:23:41,494 [INFO] Getting context data for SubscriptionView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:696
+2025-04-28 15:23:43,309 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 15:23:45,399 [INFO] Getting context data for AppsView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:714
+2025-04-28 15:23:46,667 [INFO] Getting context data for SalesView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:809
+2025-04-28 15:23:49,292 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
+2025-04-28 15:23:50,114 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
+2025-04-28 15:23:51,772 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
+2025-04-28 15:23:52,509 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
+2025-04-28 15:23:53,858 [INFO] Getting context data for UsersView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:769
+2025-04-28 15:24:27,464 [INFO] Getting context data for AgentsView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:671
+2025-04-28 15:24:42,651 [INFO] Getting context data for FeedbacksView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:727
+2025-04-28 15:26:27,704 [INFO] Getting context data for SettingView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:796
+2025-04-28 15:26:30,797 [INFO] Getting context data for SubscriptionView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:696
+2025-04-28 15:26:37,418 [INFO] Fetching all subscriptions for coupon creation form - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:1111
+2025-04-28 15:29:17,920 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 15:30:47,101 [INFO] Getting context data for SubscriptionView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:696
+2025-04-28 15:33:49,081 [INFO] Getting context data for MasterAdminView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:531
+2025-04-28 15:34:41,918 [INFO] Getting context data for SettingView - C:\Users\hp5cd\OneDrive\Desktop\onetool another\onetool\masteradmin\views.py:796
