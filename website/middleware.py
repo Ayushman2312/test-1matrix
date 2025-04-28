@@ -254,7 +254,6 @@ class CustomDomainMiddleware:
             '[::1]',
             '.test',
             '.local',
-            '1matrix.in',
             '.devtunnels.ms',
             # '1matrix.in'  # Removed from local domains to treat it as a custom domain
         ]
