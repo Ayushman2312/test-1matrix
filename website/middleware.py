@@ -241,7 +241,7 @@ class CustomDomainMiddleware:
         host = request.get_host().lower()
         
         # Skip for the main domain
-        if self._is_main_domain(host) and not path.startswith('s/'):
+        if self._is_main_domain(host):
             return True
             
         return False
