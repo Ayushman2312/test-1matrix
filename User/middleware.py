@@ -54,6 +54,7 @@ class UserAuthMiddleware:
             'customersupport' in current_path or
             'upi-payment' in current_path or
             'masteradmin' in current_path or
+            'alavi07' in current_path or
             # Include website public paths
             current_path.startswith('/website/public/')
         )
