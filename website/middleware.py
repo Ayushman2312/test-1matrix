@@ -1,6 +1,6 @@
 from django.http import HttpResponseNotFound
 from django.shortcuts import render
-from .models import CustomDomain, DomainLog, Website, WebsitePage
+from .models import CustomDomain, DomainLog, WebsitePage
 import os
 
 class CustomDomainMiddleware:
