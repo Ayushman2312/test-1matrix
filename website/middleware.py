@@ -256,6 +256,8 @@ class CustomDomainMiddleware:
             '.local',
             '.devtunnels.ms',
             '1matrix.in',
+            'www.1matrix.in',
+            '89.116.20.128',
             # '1matrix.in'  # Removed from local domains to treat it as a custom domain
         ]
         
