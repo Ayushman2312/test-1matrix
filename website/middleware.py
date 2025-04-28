@@ -1,4 +1,4 @@
-from django.http import HttpResponseNotFound, HttpResponseForbidden
+from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from .models import CustomDomain, DomainLog, Website, WebsitePage
 import os
@@ -254,9 +254,9 @@ class CustomDomainMiddleware:
             '[::1]',
             '.test',
             '.local',
-            '1matrix.io',
+            '1matrix.in',
             '.devtunnels.ms',
-            '1matrix.in'  # Match any devtunnels.ms subdomain
+            # '1matrix.in'  # Removed from local domains to treat it as a custom domain
         ]
         
         for domain in local_domains:
@@ -266,7 +266,7 @@ class CustomDomainMiddleware:
         return False
 
     def _is_main_domain(self, host):
-        main_domains = ['1matrix.io', 'www.1matrix.io', '89.116.20.128']
+        main_domains = ['1matrix.in', 'www.1matrix.in', '89.116.20.128']
         return host in main_domains or host.startswith('localhost') or host.startswith('127.0.0.1')
         
     def _prepare_seo_data(self, website, page=None):
