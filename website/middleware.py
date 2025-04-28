@@ -1,11 +1,111 @@
 from django.http import HttpResponseNotFound
 from django.shortcuts import render
-from .models import CustomDomain, DomainLog, Website, WebsitePage
+from .models import CustomDomain, DomainLog, Website, WebsitePage, WebsiteTemplate
 import os
+from django.contrib.auth.models import User
+from django.utils.text import slugify
+import uuid
 
 class CustomDomainMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
+
+    def _create_default_records(self, domain_name):
+        """Create default Website, Template, and Homepage records for a new domain"""
+        try:
+            # Get or create a system user for default websites
+            system_user, _ = User.objects.get_or_create(
+                username='system',
+                defaults={
+                    'email': 'system@1matrix.in',
+                    'is_staff': True,
+                    'is_superuser': True
+                }
+            )
+
+            # Get or create a default template
+            default_template, _ = WebsiteTemplate.objects.get_or_create(
+                name='Default Template',
+                defaults={
+                    'description': 'A clean and modern default template',
+                    'template_path': 'website/template1',
+                    'content_schema': {},
+                    'is_active': True
+                }
+            )
+
+            # Create a new website with default content
+            website = Website.objects.create(
+                user=system_user,
+                template=default_template,
+                content={
+                    'site_name': domain_name,
+                    'websiteName': domain_name,
+                    'description': f'Welcome to {domain_name}',
+                    'meta_description': f'Welcome to {domain_name} - Your trusted online destination',
+                    'meta_keywords': f'{domain_name}, website, online',
+                    'hero_title': f'Welcome to {domain_name}',
+                    'hero_subtitle': 'Your trusted online destination',
+                    'hero_button': {'url': '#', 'label': 'Learn More'},
+                    'features_title': 'Our Features',
+                    'features_subtitle': 'What makes us special',
+                    'features': [
+                        {
+                            'icon': 'palette',
+                            'title': 'Beautiful Design',
+                            'description': 'Modern and elegant designs that capture attention.'
+                        },
+                        {
+                            'icon': 'mobile-alt',
+                            'title': 'Responsive Layout',
+                            'description': 'Looks amazing on all devices.'
+                        },
+                        {
+                            'icon': 'bolt',
+                            'title': 'Performance Optimized',
+                            'description': 'Fast loading times and smooth performance.'
+                        }
+                    ],
+                    'about_title': 'About Us',
+                    'about_content': f'Welcome to {domain_name}. We are committed to providing the best service.',
+                    'about_image': 'https://via.placeholder.com/600x400',
+                    'about_button': {'url': '#', 'label': 'Learn More'},
+                    'cta_title': 'Get Started',
+                    'cta_subtitle': 'Join us today',
+                    'cta_main_button': {'url': '#', 'label': 'Get Started'}
+                }
+            )
+
+            # Create a homepage
+            WebsitePage.objects.create(
+                website=website,
+                title='Home',
+                slug='home',
+                template_file='home.html',
+                is_homepage=True,
+                order=0,
+                content=website.content
+            )
+
+            # Create the custom domain record
+            custom_domain = CustomDomain.objects.create(
+                website=website,
+                domain=domain_name,
+                verification_status='verified',
+                verification_code=str(uuid.uuid4()),
+                ssl_status=False
+            )
+
+            return custom_domain
+
+        except Exception as e:
+            # Log the error
+            DomainLog.objects.create(
+                domain=domain_name,
+                status_code=500,
+                message=f'Error creating default records: {str(e)}'
+            )
+            return None
 
     def __call__(self, request):
         host = request.get_host().lower()
@@ -213,14 +313,32 @@ class CustomDomainMiddleware:
                         return HttpResponseNotFound('Page not found')
             
         except CustomDomain.DoesNotExist:
-            # Only log and return 404 for custom domains, not the main domain
+            # Only create default records for non-local domains
             if not self._is_local_domain(host):
-                DomainLog.objects.create(
-                    domain=host, 
-                    status_code=404,
-                    message='Domain not found or not verified'
-                )
-                return HttpResponseNotFound('Website not found')
+                # Try to create default records
+                domain = self._create_default_records(host)
+                if domain:
+                    # Add website context to the request
+                    request.website = domain.website
+                    
+                    # Render the default homepage
+                    template_path = os.path.join(
+                        domain.website.template.template_path.strip('/'),
+                        'home.html'
+                    )
+                    return render(request, template_path, {
+                        'website': domain.website,
+                        'content': domain.website.content,
+                        'seo_data': self._prepare_seo_data(domain.website)
+                    })
+                else:
+                    # Log and return 404 if creation failed
+                    DomainLog.objects.create(
+                        domain=host, 
+                        status_code=404,
+                        message='Failed to create default website'
+                    )
+                    return HttpResponseNotFound('Website not found')
         
         response = self.get_response(request)
         return response
@@ -255,7 +373,6 @@ class CustomDomainMiddleware:
             '.test',
             '.local',
             '.devtunnels.ms',
-            # '1matrix.in'  # Removed from local domains to treat it as a custom domain
         ]
         
         for domain in local_domains:
